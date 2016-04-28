@@ -143,13 +143,13 @@
     return [self entitiesForName:name withPredicate:predicate sortDescriptors:nil];
 }
 
-+(id)entityWithPredicate:(NSPredicate*)predicate
++(instancetype)entityWithPredicate:(NSPredicate*)predicate
 {
     NSString *name = NSStringFromClass(self.class);
     return [self entityForName:name withPredicate:predicate];
 }
 
-+(id)entityForName:(NSString*)name withPredicate:(NSPredicate*)predicate
++(instancetype)entityForName:(NSString*)name withPredicate:(NSPredicate*)predicate
 {
     NSArray* allEntities = [self entitiesForName:name withPredicate:predicate];
     
@@ -167,7 +167,7 @@
  *
  * @return The new entity instance.
  */
-+(NSManagedObject*)createEntity
++(instancetype)createEntity
 {
     NSString *name = NSStringFromClass(self.class);
     return [NSEntityDescription insertNewObjectForEntityForName:name inManagedObjectContext:[self moc]];;
@@ -181,7 +181,7 @@
  *
  * @param name The class name of the entity.
  */
-+(NSManagedObject*)createEntityForName:(NSString*)name
++(instancetype)createEntityForName:(NSString*)name
 {
     return [NSEntityDescription insertNewObjectForEntityForName:name inManagedObjectContext:[self moc]];;
 }
