@@ -18,8 +18,8 @@ in your ViewController class:
 
 (if category is imported by precompiled header file you only need to import your entity class ... else import the category "NSManagedObject+Data" too.
 
-#import "MyCustomEntity.h"
-#import "NSManagedObject+Data.h"
+import "MyCustomEntity.h"
+import "NSManagedObject+Data.h"
 
 -(void)methodFoo
 {
