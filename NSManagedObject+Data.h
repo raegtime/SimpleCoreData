@@ -13,8 +13,8 @@
 
 +(void)save;
 
-+(NSManagedObject*)createEntity;
-+(NSManagedObject*)createEntityForName:(NSString*)name;
++(instancetype)createEntity;
++(instancetype)createEntityForName:(NSString*)name;
 
 +(void)deleteAllEntitiesForName:(NSString*)name;
 +(void)deleteAllEntities;
@@ -25,8 +25,8 @@
 +(void)deleteEntitiesWithPredicate:(NSPredicate*)predicate;
 +(void)deleteEntitiesForName:(NSString*)name withPredicate:(NSPredicate*)predicate;
 
-+(id)entityWithPredicate:(NSPredicate*)predicate;
-+(id)entityForName:(NSString*)name withPredicate:(NSPredicate*)predicate;
++(instancetype)entityWithPredicate:(NSPredicate*)predicate;
++(instancetype)entityForName:(NSString*)name withPredicate:(NSPredicate*)predicate;
 
 +(NSArray*)entitiesWithPredicate:(NSPredicate*)predicate;
 +(NSArray*)entitiesForName:(NSString*)name withPredicate:(NSPredicate*)predicate;
